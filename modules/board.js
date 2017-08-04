@@ -387,7 +387,9 @@ class Board {
         move.set(vertex, sign)
 
         // Remove captured stones
-
+        // skip the automatic capture to playtest other games different to Go
+        /*
+        
         let deadNeighbors = move.getNeighbors(vertex)
             .filter(n => move.get(n) === -sign && !move.hasLiberties(n))
 
@@ -410,7 +412,8 @@ class Board {
                 move.captures[(sign + 1) / 2]++
             }
         }
-
+        */
+        
         return move
     }
 
